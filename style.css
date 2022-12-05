@@ -1,0 +1,169 @@
+body{
+    font-family: sans-serif;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.kpp{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.default-btn{
+    padding: 20px 40px;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 22px;
+    transition: .3s;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.default-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.default-btn[disabled], .default-btn:disabled {
+    background-color: grey;
+}
+
+.small-btn {
+    font-size: 16px;
+    padding: 15px 35px;
+    border-radius: 5px;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+.timer {
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    margin: 10px 0px
+}
+
+.kpp__img {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    position: relative;
+}
+
+.kpp__img-main {
+    width: 550px;
+    padding-left: 20px;
+}
+
+.kpp__img-off {
+    width: 40px;
+    height: 40px;
+    display: none;
+    
+}
+
+.kpp__img-on {
+    width: 40px;
+    height: 40px;
+
+} 
+
+@keyframes active {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes active2 {
+    from {
+        transform: rotate(-90deg) scale(1);
+    }
+    to {
+        transform: rotate(-90deg) scale(1.15);
+    }
+}
+
+#kpp1-off {
+    position: absolute;
+    bottom: 145px;
+    animation: active2 1s ease-in-out infinite;
+}
+
+#kpp1-on {
+    position: absolute;
+    bottom: 145px;
+    animation: active2 1s ease-in-out infinite;
+}
+
+#kpp2-off {
+    position: absolute;
+    top: 20px;
+    right: 210px;
+    animation: active 1s ease-in-out infinite;
+}
+
+#kpp2-on {
+    position: absolute;
+    top: 20px;
+    right: 210px;
+    animation: active 1s ease-in-out infinite;
+}
+
+.kpp__events-list {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    width: 600px;
+    height: 160px;
+    overflow-y: auto;
+}
+
+
+.kpp__stat-list {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    width: 600px;
+    height: 160px;
+}
+
+.kpp__control-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.control {
+    margin: 10px 0px;
+}
+
+input {
+    padding: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+    border: 2px solid black;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система реального времени управления КПП</title>
+</head>
+<body>
+    <div class="kpp">
+        <div class="header-info">
+            <div class="header-info__info">
+                <h1 class="header-info__header">
+                    Система реального времени управления КПП
+                </h1>
+                <h3 class="header-info__header">
+                    Андриянов Максим Владимирович ПИ-422
+                </h3>
+            </div>
+            <div class="header-info__buttons">
+                <button type="button" class="default-btn" id="start-btn">Запустить</button>
+                <button type="button" class="default-btn" disabled id="stop-btn">Остановить</button>
+            </div>
+            
+       </div>
+       <div class="timer">
+            <h1 id="timer">9:16:39</h1>
+       </div>
+       <div class="control" style="display: flex; justify-content: space-between;">
+            <div>
+                <span>Стоимость вызова СБР(служба быстрого реагирования) (в рублях): </span> <input type="text" name="sbr" value="6750" id="sbr" readonly>
+            </div>
+            <div>
+                <span>Стоимость мастера для ремонта КПП (в рублях): </span> <input type="text" value="9200" name="remont" id="remont" readonly>
+            </div>
+       </div>
+       <div style="display: flex;">
+        <div class="kpp__img">
+            <img class="kpp__img-main" src="assets/1.png">
+            <img id="kpp1-off" class="kpp__img-off" src="assets/2.png">
+            <img id="kpp1-on" class="kpp__img-on" src="assets/3.png">
+            <img id="kpp2-off" class="kpp__img-off" src="assets/2.png">
+            <img id="kpp2-on" class="kpp__img-on" src="assets/3.png">
+           </div>
+           <div class="kpp__control-panel">
+                <h2>Журнал событий</h2>
+                <div class="kpp__events-list">
+                    
+                </div>
+                <h2>Статистика</h2>
+                <div class="kpp__stat-list">
+                    <p>Количество прошедших через КПП #1: <b id="kpp1-stat">0</b></p>
+                    <p>Количество прошедших через КПП #2 (со шлагбаумом): <b id="kpp2-stat">0</b> </p>
+                    <p>Количество проехавших машин КПП #2 (со шлагбаумом): <b id="kpp2-stat-car">0</b></p>
+                    <p>Затраты на ремонт КПП: <b id="kpp-remont-stat">0</b> руб.</p>
+                    <p>Затраты на вызов группы быстрого реагирования: <b id="kpp-sbr-stat">0</b> руб.</p>
+                </div>
+           </div>
+       </div>
+       <div class="kpp__control-buttons">
+                <button type="button" id="kpp1-rem" class="default-btn small-btn">Вызвать мастера на КПП #1</button>
+                <button type="button" id="kpp1-sbr" class="default-btn small-btn">Вызвать СБР на КПП #1</button>
+                <button type="button" id="kpp2-rem" class="default-btn small-btn">Вызвать мастера на КПП #2</button>
+                <button type="button" id="kpp2-sbr" class="default-btn small-btn">Вызвать СБР на КПП #2</button>
+       </div>
+       
+    </div>
+   
+    
+</body>
+</html>
